@@ -1,0 +1,156 @@
+---
+title: "DSCI 521 - Lab 2"
+subtitle: ""  
+author: 
+  - "MDS 2021/22"
+output:
+  xaringan::moon_reader:
+    seal: false # saco filmina de inicio
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "https://platform.twitter.com/widgets.js"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+library(xaringanExtra)
+library(tidyverse)
+library(knitr)
+library(nomnoml)
+library(countdown)
+xaringanExtra::use_logo(
+  image_url = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png"
+)
+xaringanExtra::use_panelset()
+xaringanExtra::use_broadcast()
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(share_buttons = c("twitter", "linkedin"))
+xaringanExtra::use_tachyons()
+xaringanExtra::use_fit_screen()
+xaringanExtra::use_tile_view() # O
+style_mono_accent(
+  base_color = "#0dc96f",
+  background_color = "#ffffff",
+  inverse_background_color = "#3298cb",
+  header_color = "#022044",
+  inverse_header_color = "#ffffff", 
+  inverse_text_color = "#ffffff",
+  code_inline_color = "#179c55",
+  link_color= "#0000FF",
+  text_font_size = "25px",
+  header_font_google = google_font("Poppins", "Regular", "400"),
+  text_font_google   = google_font("Darker Grotesque", "500"),
+  code_font_google   = google_font("Fira Mono"),
+  )
+
+```
+
+
+
+class: middle, center
+
+```{r hex, fig.align='center', echo = FALSE, out.width=150} 
+    knitr::include_graphics("img/hex.png")
+```
+# DSCI 521 lab2
+
+---
+
+class: center, middle
+
+## The recordings of the lectures will be in the media gallery
+
+
+
+---
+
+## Group lab
+
+**Questions**
+
+1. Create a new repository
+2. Clone and make changes 
+3. Create a branch and pull request (PR)
+4. Merge Conflict
+5. Fork and PR
+6. _Optional_
+
+---
+
+## Group lab
+
+- You all complete the lab but you submit one file to Gradescope.
+
+--
+
+- We will count the commits on the GitHub repo of the group
+
+--
+
+_Note: In the questions were links to personal repository are requested, you paste 3-4 links._
+
+
+---
+
+
+class: inverse, middle, center
+## Zoom
+
+Remember to request help!
+
+---
+
+class: middle, center
+```{r PR, fig.align='center', echo = FALSE,out.width=900} 
+knitr::include_graphics("img/good_message.png")
+```
+
+
+.footnote[[XKCD comics](https://xkcd.com/1296/)]
+
+---
+
+## Good commit messages
+
+For all commits in this lab, please provide a a short descriptive message, which completes the sentence "this commit will..." and starts with a capital letter.
+
+--
+
+#### Bad messages:
+- fixes an error
+- added new code
+
+--
+
+#### Good messages:
+- Fix an error in the notebook export
+- Make the README more welcoming
+
+
+---
+
+## Amending the most recent commit message
+
+```bash
+git commit --amend -m "Fix an error in the notebook export"
+```
+
+--
+
+### Extra command
+
+```bash
+git log --oneline -p
+```
+
+---
+
+
